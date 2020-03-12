@@ -11,22 +11,48 @@
 
     <style>
       .rcorners2 {
-        border-radius: 25px;
+        background-color: black;
+        border-radius: 5px;
         border: 2px solid #73AD21;
-        padding: 0px; 
-        width: 100%;
-        height: 100%; 
+        padding: 10px; 
+        width: calc(100% - 20px);
+        bottom: 0px; 
+        overflow: hidden;
       }
+
+      .rcorners3 {
+        border-radius: 5px;
+        border: 2px solid #f5c542;
+        padding: 0px; 
+        margin-top: 10px;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        vertical-align: center;
+      }
+
+      #unityContainer{
+        background-color: red;
+        width: 100%;
+        height: 100%;
+      }
+
     </style>
+
   </head>
   <body>
-    <div class=rcorners2 >
-      <div id="unityContainer" style="width: 100%; height: 100%; margin: 0px"></div>
-    </div>
-    <p>
-      by <a href="mailto:josemiguelsantananunez@gmail.com"> José Miguel Santana Núñez </a>
-    </p>
 
+    <div class=rcorners2 >
+
+      <div id="unityContainer"></div>
+
+    </div>
+
+    <div class=rcorners3 >
+      <p>
+        by <a href="mailto:josemiguelsantananunez@gmail.com"> José Miguel Santana Núñez </a>
+      </p>
+    </div>
 
 
   </body>
