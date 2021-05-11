@@ -4,44 +4,22 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | TerraNova</title>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      UnityLoader.instantiate("unityContainer", "Build/TerraNova_WebGL.json");
-    </script>
-
-    <style>
-      .rcorners2 {
-        background-color: black;
-        border-radius: 5px;
-        border: 4px solid #73AD21;
-        width: calc(100%-8px);
-        bottom: 0px; 
-        overflow: hidden;
-      }
-
-      .rcorners3 {
-        border-radius: 5px;
-        border: 2px solid #f5c542;
-        padding: 0px; 
-        margin-top: 10px;
-        width: 100%;
-        height: 40px;
-        text-align: center;
-        vertical-align: center;
-      }
-
-      #unityContainer{
-        background-color: red;
-        width: 100%;
-        bottom: 0px; 
-        overflow: hidden;
-		height: 100vh;
-      }
-
-    </style>
-
   </head>
-  <body style="margin: 0px;background-color: black;">
-      <div id="unityContainer"></div>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #231F20"></canvas>
+    <script src="Build/Terranova-Flights_build_WebGL.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Terranova-Flights_build_WebGL.data.gz",
+        frameworkUrl: "Build/Terranova-Flights_build_WebGL.framework.js.gz",
+        codeUrl: "Build/Terranova-Flights_build_WebGL.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "com.Santana",
+        productName: "TerraNova",
+        productVersion: "0.1",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
   </body>
 </html>
